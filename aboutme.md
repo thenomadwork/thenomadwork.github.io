@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About thenomad.work
+title: about tnw
 subtitle: Why is this the most useful website for digital nomads
 ---
 
@@ -10,6 +10,6 @@ Help other people like you by sharing your favourite spots.
 
 
 
-### marta and paulo
+### paulo
 
 
