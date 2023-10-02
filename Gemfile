@@ -7,3 +7,4 @@ gemspec
 # added the following piece to solve an os-dependent issue with gem tzinfo 
 gem 'github-pages'
 gem 'tzinfo-data'
+gem "webrick", "~> 1.8"
