@@ -22,7 +22,7 @@ layout: page
 
     {% for post in posts %}
       <a href="{{ post.url | absolute_url }}">
-        <div class="flex-item {% for tag in post.tags %}tag-color-{{ tag }} {% endfor %}">
+        <div class="flex-item tag-color-{{ post.location_type }}">
           {{ post.title | strip_html }}
         </div>
       </a>
