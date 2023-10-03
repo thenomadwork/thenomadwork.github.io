@@ -656,7 +656,7 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
   transition: opacity 1s linear;
 }
 .intro-header .page-heading {
-  text-align: center;
+  text-align: left;
 }
 .intro-header.big-img .page-heading,
 .intro-header.big-img .post-heading {
@@ -674,13 +674,17 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
 }
 .intro-header .page-heading .page-subheading,
 .intro-header .post-heading .post-subheading {
-  font-size: 1.6875rem;
-  line-height: 1.1;
+  font-size: 1.123rem;
+  line-height: 1.5;
   display: block;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
   margin: 0.625rem 0 0;
+
+  /* Add text-align property to align text to the left */
+  text-align: left;
 }
+
 .intro-header .post-heading .post-subheading {
   margin-bottom: 1.25rem;
 }
@@ -738,7 +742,7 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
 }
 /* Many phones are 320 or 360px, so make sure images are a proper aspect ratio in those cases */
 .header-section.has-img .intro-header.no-img {
-  display: none;
+  display: none;  
 }
 @media (max-width: 365px) {
   .header-section.has-img .intro-header.no-img {

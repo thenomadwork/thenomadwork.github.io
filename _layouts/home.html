@@ -17,11 +17,17 @@ layout: page
 
 <body>
   <div class="flex-container">
+
+    
+
     {% for post in posts %}
       <a href="{{ post.url | absolute_url }}">
-        <div class="flex-item">{{ post.title | strip_html }}</div>
+        <div class="flex-item {% for tag in post.tags %}tag-color-{{ tag }} {% endfor %}">
+          {{ post.title | strip_html }}
+        </div>
       </a>
     {% endfor %}    
-    
+  </div>
 </body>
+
 
