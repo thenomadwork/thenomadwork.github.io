@@ -100,7 +100,29 @@ img::-moz-selection {
 }
 
 img {
-  max-width: 100%;
+  max-width: 100%; /* Allow images to be responsive within their containers */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+@media (min-width: 600px) {
+  img {
+    width: 600px; /* Set a fixed width for screens wider than 600px */
+    max-width: 100%; /* Allow images to be responsive within their containers */
+  }
+}
+
+/* Default styling for all iframes */
+iframe {
+  max-width: 100%; /* Allow iframes to be responsive within their containers */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+/* Apply specific styling for screens wider than 600px */
+@media (min-width: 600px) {
+  iframe {
+    width: 600px; /* Set a fixed width for screens wider than 600px */
+    max-width: 100%; /* Allow iframes to be responsive within their containers */
+  }
 }
 
 .linked-section {
