@@ -43,18 +43,30 @@ layout: base
         {{ content }}
       </article>
 
+
+      {% assign current_filename = page.path | filename | remove: '_posts/' | remove: '.md'  %}
+
+      {% for static_file in site.static_files %}
+        {% assign file_extension = static_file.path | split: '.' | last %}
+        {% if file_extension == 'jpg' or file_extension == 'jpeg' %}
+          {% assign image_filename = static_file.basename | remove: '/assets/img/' | remove: '.jpg' | remove: '.jpeg' %}
+          {% if image_filename == current_filename %}
+            <h3> impressions </h3>
+              <img src="{{ static_file.path | relative_url }}" alt="Image for {{ current_filename }}"  />
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+
       {% if page.location_embed %}
       <h3> location </h3>
         {{ page.location_embed }}
       {% endif %}
 
-
-
       {% if page.speed_embed %}
       <h3> internet speed </h3>
         {{ page.speed_embed }}
       {% endif %}
-
 
       {% if page.tags.size > 0 %}
         <div class="blog-tags">
@@ -64,7 +76,6 @@ layout: base
           {% endfor %}
         </div>
       {% endif %}
-
 
       {% if page.after-content %}
         <div class="after-content">
