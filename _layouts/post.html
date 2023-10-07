@@ -68,6 +68,13 @@ layout: base
         {{ page.speed_embed }}
       {% endif %}
 
+
+      {% if page.contributor_gh_username%}
+      <h3> contributor </h3>
+      <p> Special thanks to <a href="https://github.com/{{ page.contributor_gh_username }}">{{ page.contributor_gh_username }}</a> for sharing! </p>
+      {% endif %}
+
+
       {% if page.tags.size > 0 %}
         <div class="blog-tags">
           <span>Tags:</span>
@@ -85,9 +92,18 @@ layout: base
         </div>
       {% endif %}
 
-      {% if page.social-share %}
-        {% include social-share.html %}
-      {% endif %}
+      <ul class="pagination blog-pager">
+        {% if page.previous.url %}
+        <li class="page-item previous">
+          <a class="page-link" href="{{ page.previous.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title | strip_html | xml_escape}}">&larr; previous spot</a>
+        </li>
+        {% endif %}
+        {% if page.next.url %}
+        <li class="page-item next">
+          <a class="page-link" href="{{ page.next.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title | strip_html | xml_escape}}">next spot &rarr;</a>
+        </li>
+        {% endif %}
+      </ul>
 
     </div>
   </div>
