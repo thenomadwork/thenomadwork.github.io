@@ -14,7 +14,7 @@ author: nomads all over the world
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: "aboutme"
+  About Me: "https://medium.com/@moralescas/the-nomad-work-299c2264027b"
 #  Resources:
 #    - Beautiful Jekyll: "https://beautifuljekyll.com"
 #    - Learn markdown: "https://www.markdowntutorial.com/"
